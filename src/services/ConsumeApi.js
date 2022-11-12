@@ -12,20 +12,5 @@ export const getCharacters = async (page) => {
 
 export const getCharacterInfo = async (characterId) => {
     const response = await fetch(`${endpoints.characters}/${characterId}`);
-    const data = await response.json();
-    const character = {
-        id: data.id,
-        name: data.name,
-        image: data.image,
-        status: data.status,
-        species: data.species,
-        gender: data.gender,
-        origin: {
-            name: data.origin.name
-        },
-        location: {
-            name: data.location.name
-        }
-    }
-    return character;
+    return await response.json();
 };
