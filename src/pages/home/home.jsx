@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import { Character } from "../components/character-card/character-card";
 import { getCharacters } from "../../services/ConsumeApi";
-import "./home.css"
+import "./home.css";
 
 export const Home = () => {
 
